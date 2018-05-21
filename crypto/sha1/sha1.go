@@ -1,6 +1,6 @@
 //
 
-package crypto
+package sha1
 
 import (
 	"crypto/sha1"
