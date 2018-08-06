@@ -16,3 +16,11 @@ func GetEnv(env_var string) []string {
 		return strings.Split(os.Getenv(env_var), ":")
 	}
 }
+
+func GetEnvOrDefault(name string, or string) *string {
+	ret := os.Getenv(name)
+	if (len(ret) == 0) || (ret == "") {
+		ret = or
+	}
+	return &ret
+}
