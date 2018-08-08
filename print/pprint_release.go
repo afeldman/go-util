@@ -1,3 +1,4 @@
+// +build !debug
 package print
 
 import (
@@ -8,9 +9,6 @@ import (
 )
 
 func PrintCommand(cmd *exec.Cmd) {
-	if debug {
-		fmt.Printf("==> Executing: %s\n", strings.Join(cmd.Args, " "))
-	}
 }
 
 func PrintError(err error) {
@@ -20,7 +18,4 @@ func PrintError(err error) {
 }
 
 func PrintOutput(outs []byte) {
-	if (len(outs) > 0) && (debug) {
-		fmt.Printf("==> Output: %s\n", string(outs))
-	}
 }
