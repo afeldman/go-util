@@ -5,7 +5,7 @@ import (
 	"os"
 )
 
-func CheckContent(out *os.File) (string, err) {
+func CheckContent(out *os.File) (string, error) {
 	buffer := make([]byte, 512)
 
 	_, err := out.Read(buffer)

@@ -3,6 +3,7 @@ package fileinfo
 import (
 	"os"
 	"io"
+	"log"
 )
 
 func Fcopy(src, dest string) {

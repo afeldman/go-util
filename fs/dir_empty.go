@@ -1,6 +1,9 @@
 package filesystem
 
-import "os"
+import (
+	"os"
+	"io"
+)
 
 func IsEmpty(path string) (bool, error) {
 	f, err := os.Open(path)
