@@ -17,7 +17,7 @@ func GetEnv(env_var string) []string {
 	}
 }
 
-func GetEnvOrDefault(name, or string) *string {
+func GetEnvOrDefault(name, or string) string {
 	if value, ok := os.LookupEnv(name); ok {
 		return value
 	}
