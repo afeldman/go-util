@@ -17,10 +17,9 @@ func GetEnv(env_var string) []string {
 	}
 }
 
-func GetEnvOrDefault(name string, or string) *string {
-	ret := os.Getenv(name)
-	if (len(ret) == 0) || (ret == "") {
-		ret = or
+func GetEnvOrDefault(name, or string) string {
+	if value, ok := os.LookupEnv(name); ok {
+		return value
 	}
-	return &ret
+	return or
 }
