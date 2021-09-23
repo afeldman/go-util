@@ -1,12 +1,12 @@
 package fileinfo
 
 import (
-	"os"
 	"io"
 	"log"
+	"os"
 )
 
-func Fcopy(src, dest string) error{
+func Fcopy(src, dest string) error {
 	// Open original file
 	originalFile, err := os.Open(src)
 	if err != nil {
