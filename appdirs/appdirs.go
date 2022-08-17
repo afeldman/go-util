@@ -2,7 +2,7 @@ package appdirs
 
 // ref: https://github.com/christopherobin/go-appdirs
 
-import fs "github.com/afeldman/go-util/fs"
+import fs "github.com/afeldman/go-util/filesystem"
 
 type AppConf struct {
 	Name    string
