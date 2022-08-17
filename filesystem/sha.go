@@ -1,9 +1,9 @@
 //
 
-package sha1
+package filesystem
 
 import (
-	"crypto/sha1"
+	"crypto/sha256"
 	"io"
 	"log"
 	"math"
@@ -49,7 +49,7 @@ func (fh *FileHash) Hash(dir string) {
 		blocks := uint64(math.Ceil(float64(filesize) / float64(filechunk)))
 
 		// Start hash
-		hash := sha1.New()
+		hash := sha256.New()
 
 		// Check each block
 		for i := uint64(0); i < blocks; i++ {
