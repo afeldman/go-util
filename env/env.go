@@ -5,6 +5,10 @@ import (
 	"strings"
 )
 
+func Plan9GetEnv(env_var string) string {
+	return GetEnvOrDefault(env_var, strings.ToLower(env_var))
+}
+
 func IsWindows() bool {
 	return os.PathSeparator == '\\' && os.PathListSeparator == ';'
 }
