@@ -3,6 +3,11 @@
 
 package filesystem
 
+import (
+	"errors"
+	"os"
+)
+
 func osdir() (string, error) {
 	if home := os.Getenv(homeEnv); home != "" {
 		return home, nil
