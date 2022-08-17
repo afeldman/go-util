@@ -5,10 +5,8 @@ package appdirs
 
 import (
 	"path"
-	"strings"
 
-	"github.com/afeldman/go-util/env"
-	fs "github.com/afeldman/go-util/fs"
+	fs "github.com/afeldman/go-util/filesystem"
 )
 
 func (conf AppConf) userDataDir() (string, error) {
@@ -17,7 +15,7 @@ func (conf AppConf) userDataDir() (string, error) {
 		return "", err
 	}
 
-	dataHome = path.Join(home, "Library/Application Support")
+	dataHome := path.Join(home, "Library/Application Support")
 
 	// add app information
 	if conf.Name != "" {

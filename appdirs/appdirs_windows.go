@@ -5,10 +5,8 @@ package appdirs
 
 import (
 	"path"
-	"strings"
 
-	"github.com/afeldman/go-util/env"
-	fs "github.com/afeldman/go-util/fs"
+	fs "github.com/afeldman/go-util/filesystem"
 )
 
 var (
