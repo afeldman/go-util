@@ -1,6 +1,7 @@
 //go:build darwin
 // +build darwin
 
+// package filesystem contains functions for working with the filesystem
 package filesystem
 
 import (
@@ -11,6 +12,11 @@ import (
 	"strings"
 )
 
+// osdir gets the home directory of the user
+// Returns:
+//
+//	string -- the home directory of the user
+//	error -- an error if the home directory could not be found
 func osdir() (string, error) {
 
 	// First prefer the HOME environmental variable

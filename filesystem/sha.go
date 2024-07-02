@@ -1,5 +1,4 @@
-//
-
+// package filesystem contains functions for working with the filesystem
 package filesystem
 
 import (
@@ -14,17 +13,23 @@ import (
 // 8KB
 const filechunk = 8192
 
+// filenames
 var filename []string
 
+// hashes
 type FileHashNode struct {
 	Path string
 	Hash []byte
 }
 
+// filehash
 type FileHash struct {
 	Nodes []FileHashNode
 }
 
+// Hash hashes the files in a directory
+// Arguments:
+// dir -- the directory to hash
 func (fh *FileHash) Hash(dir string) {
 
 	err := filepath.Walk(dir, countfiles)
@@ -67,13 +72,15 @@ func (fh *FileHash) Hash(dir string) {
 		}
 
 		// Output the results
-		//fmt.Printf("Filename: %s \tHash: %x\n", filepath.Base(file.Name()), hash.Sum(nil))
 		filehashnote := FileHashNode{infile.Name(), hash.Sum(nil)}
 		fh.Nodes = append(fh.Nodes, filehashnote)
 	}
 
 }
 
+// check checks for errors
+// Arguments:
+// e -- the error to check
 func check(e error) {
 	if e != nil {
 		log.Fatal(e)
@@ -81,6 +88,15 @@ func check(e error) {
 	}
 }
 
+// countfiles counts the files in a directory
+// Arguments:
+// path -- the path to the directory
+// info -- the file info
+// err -- an error
+//
+// Returns:
+//
+// error -- an error
 func countfiles(path string, info os.FileInfo, err error) error {
 	check(err)
 	abs, err := filepath.Abs(path)

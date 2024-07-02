@@ -1,6 +1,7 @@
 //go:build !windows && !darwin
 // +build !windows,!darwin
 
+// package filesystem contains functions for working with the filesystem
 package filesystem
 
 import (
@@ -9,6 +10,11 @@ import (
 	"github.com/afeldman/go-util/env"
 )
 
+// osdir gets the home directory of the user
+// Returns:
+//
+//	string -- the home directory of the user
+//	error -- an error if the home directory could not be found
 func osdir() (string, error) {
 
 	// First prefer the HOME environmental variable
@@ -23,5 +29,4 @@ func osdir() (string, error) {
 	}
 
 	return usr.HomeDir, nil
-
 }

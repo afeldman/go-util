@@ -1,3 +1,4 @@
+// Description: This file contains the function to check the content type of a file.
 package fileinfo
 
 import (
@@ -6,6 +7,18 @@ import (
 	"os"
 )
 
+/*
+	Copy a file
+
+Arguments:
+
+		src -- the source file to copy
+	    dest -- the destination file to copy to
+
+Returns:
+
+	error -- an error if the file could not be copied
+*/
 func Fcopy(src, dest string) error {
 	// Open original file
 	originalFile, err := os.Open(src)
