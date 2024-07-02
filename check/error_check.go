@@ -3,7 +3,7 @@ package check
 
 import log "github.com/sirupsen/logrus"
 
-func checkError(err error) {
+func CheckError(err error) {
 	if err != nil {
 		log.Fatal(err)
 	}
