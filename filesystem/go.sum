@@ -1,4 +1,2 @@
 github.com/afeldman/go-util/env v0.0.0-20240702082254-b43879905b56 h1:GvE0YK0yyVgyml7TcqEoDM8nFMPAQreuHCJKt9H05Yc=
 github.com/afeldman/go-util/env v0.0.0-20240702082254-b43879905b56/go.mod h1:tpVAQS4KAyj4TZvfLdPmORlTCCkAXVb9dh/Yg1jQOTQ=
-github.com/mitchellh/go-homedir v1.1.0 h1:lukF9ziXFxDFPkA1vsr5zpc1XuPDn/wFntq5mG+4E0Y=
-github.com/mitchellh/go-homedir v1.1.0/go.mod h1:SfyaCUpYCn1Vlf4IUYiD9fPX4A5wJrkLzIz1N1q0pr0=
