@@ -1,7 +1,5 @@
 package filesystem
 
-//ref: https://github.com/mitchellh/go-homedir
-
 import (
 	"errors"
 	"io"
