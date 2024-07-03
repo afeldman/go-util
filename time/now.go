@@ -14,7 +14,8 @@ func ParseTime(timeString, format string) (time.Time, error) {
 
 func StringTime(time_ time.Time, format string) string {
 	if format == "" {
-		format = "2024-07-02T11:48:05Z"
+		format = time.RFC3339 + "Z"
+
 	}
 	if time_.IsZero() {
 		return time.Now().UTC().Format(format)
