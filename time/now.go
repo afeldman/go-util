@@ -14,7 +14,7 @@ func ParseTime(timeString, format string) (time.Time, error) {
 
 func StringTime(time_ time.Time, format string) string {
 	if format == "" {
-		format = time.RFC3339 + "Z"
+		format = time.RFC3339
 
 	}
 	if time_.IsZero() {
